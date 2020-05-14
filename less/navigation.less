@@ -1,0 +1,48 @@
+header {
+    background-color: @blue;
+    .flex(column, center, center);
+
+    .icon {
+        color: @white;
+        font-size: 7rem;
+        margin: 5% 0% 5% 0;
+        transform: rotate(-20deg);
+        @media @mobile {
+            font-size: 5.5rem;
+        }
+    }
+
+    h1 {
+        .font();
+        font-weight: bold;
+        font-size: 3rem;
+        margin-bottom: 5%;
+        @media @mobile {
+            font-size: 2rem;
+        }
+    }
+
+    nav {
+        @media @mobile {
+            width: 100%;
+        }
+        .flex(row, space-between, center);
+        width: 70%;
+        margin-bottom: 4%;
+        a {
+            border-radius: 3px;
+            border: 1px solid @white;
+            .font();
+            font-weight: bold;
+            padding: 3%;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: .2s;
+            &:hover {
+                background-color: @white;
+                color: @blue;
+                box-shadow: 0 0 10px @white, 0 0 40px @white, 0 0 80px @white;
+            } 
+        }
+    }
+}
